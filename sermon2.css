@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+main {
+    padding: 30px;
+}
+
+.sermon-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sermon-link {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sermon-link:hover {
+    transform: scale(1.05);
+}
+
+.sermon-link img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 600px) {
+    .sermon-links {
+        flex-direction: column;
+    }
+}

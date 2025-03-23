@@ -1,0 +1,16 @@
+bible{
+    background: url('bible.webp') no-repeat center center/cover;
+    background-attachment: fixed;
+    padding: 100px 335px;
+    color: white;
+    text-align: center;
+}
+<div class="welcome-con">
+<img class="bible" src="bible.webp">
+<p>Spreading the Word, Transforming Lives</p>
+<p>
+    We are a community dedicated to sharing the love of Christ and the truth of the Gospel with the world. Whether you're seeking spiritual growth, divine guidance, or a place to connect with fellow believers, you are welcome here.
+
+</p>
+<p>Join us in worship, explore powerful sermons, and experience God's presence in a new way. Your journey of faith starts here!</p>
+</div>

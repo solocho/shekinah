@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Our Mission | Donate</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .donate-container {
+            width: 100%;
+            max-width: 400px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .donate-box h2 {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .donate-box p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .payment-options {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border: 2px solid transparent;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .payment-method:hover {
+            border: 2px solid #4CAF50;
+        }
+
+        .payment-method img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="donate-container">
+        <div class="donate-box">
+            <h2>Support Our Mission</h2>
+            <p>Your donation helps us spread the word and touch more lives. Choose your preferred payment method below.</p>
+
+            <form id="donationForm">
+                <label for="amount">Enter Amount (KES):</label>
+                <input type="number" id="amount" required placeholder="e.g. 500">
+                
+                <label for="phone">Your Phone Number:</label>
+                <input type="text" id="phone" required placeholder="e.g. 0712345678">
+                
+                <div class="payment-options">
+                    <label class="payment-method">
+                        <input type="radio" name="payment" value="mpesa" checked>
+                        <img src="mpesa.png" alt="M-Pesa"> M-Pesa
+                    </label>
+
+                    <label class="payment-method">
+                        <input type="radio" name="payment" value="airtel">
+                        <img src="airtel2.png" alt="Airtel Money"> Airtel Money
+                    </label>
+                </div>
+
+                <button type="submit">Donate Now</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("donationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const phone = document.getElementById("phone").value.trim();
+            const amount = document.getElementById("amount").value.trim();
+            const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+
+            // Simple validation
+            if (phone === "" || amount === "" || isNaN(amount) || amount <= 0) {
+                alert("Please enter a valid phone number and amount.");
+                return;
+            }
+
+            // Simulated Payment Processing
+            alert(`Processing ${paymentMethod.toUpperCase()} payment of KES ${amount} from ${phone}`);
+
+            // Call your backend function here for M-Pesa/Airtel API integration
+        });
+    </script>
+
+</body>
+</html>

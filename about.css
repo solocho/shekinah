@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d00;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.site-name {
+    font-size: 16px;
+    color: #FFD700;
+    margin-left: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ABOUT PAGE */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.about-intro h1 {
+    font-size: 36px;
+    color: #004d00;
+    margin-bottom: 10px;
+}
+
+.about-intro p {
+    font-size: 18px;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-section {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    font-size: 22px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+/* LEADERSHIP SECTION */
+.leadership {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.leadership h2 {
+    font-size: 28px;
+    color: #004d00;
+    margin-bottom: 20px;
+}
+
+.leader-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.leader {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.leader-img-placeholder {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #004d00, #008000);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    color: #FFD700;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: green;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        display: block;
+    }
+
+    .leader-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
