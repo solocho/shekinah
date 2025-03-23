@@ -1,70 +1,57 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>shekina missionary Evangelist Network</title>
-        <link rel="stylesheet" href="index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
-    
-    </head>
-    <body>
-        <div class="header">
-            <div class="right-h">
-                <div><img class="logo" src="logo2.jpg"></div>
-                <div>
-                    <p class="name">SHEKINA MISSIONARIES EVANGELISTIC NETWORK (SMEN)</p>
-                </div>
-            </div>
-            <div class="left-h">
-                <a>Home</a>
-                <a>About Us</a>
-                <a>Sermons</a>
-                <a>Events</a>
-                <a>Devotionals</a>
-                <a>Donate</a>
-                <a>Contact us</a>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shekina Missionary Evangelist Network</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img class="logo" src="logo2.jpg" alt="Logo">
+            <p class="site-name">SHEKINA MISSIONARY EVANGELISTIC NETWORK</p>
         </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Sermons</a>
+            <a href="#">Events</a>
+            <a href="#">Devotionals</a>
+            <a href="#">Donate</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-        <div class="welcome-con">
-            <img class="bible" src="bible.webp" alt="Open Bible">
-            <div class="text-overlay">
-                <p class="l-1">Spreading the Word, Transforming Lives</p>
-                <p class="l-2">
-                    We are a community dedicated to sharing the love of Christ and the truth of the Gospel with the world. 
-                    Whether you're seeking spiritual growth, divine guidance, or a place to connect with fellow believers, you are welcome here.
-                </p>
-                <p class="l-3">Join us in worship, explore powerful sermons, and experience God's presence in a new way. Your journey of faith starts here!</p>
-            </div>
+    <section class="welcome">
+        <img class="bible" src="bible.webp" alt="Bible">
+        <div class="welcome-text">
+            <h1>Spreading the Word, Transforming Lives</h1>
+            <p>We are a community dedicated to sharing the love of Christ. Join us to grow spiritually and connect with believers.</p>
+            <button class="join-btn">Join Us</button>
         </div>
+    </section>
 
-        <div class="con-2">
-            <div class="sermons">
-               <button>Latest Sermons</button>
+    <section class="content">
+        <div class="content-box sermons"><button>Latest Sermons</button></div>
+        <div class="content-box events"><button>Upcoming Events</button></div>
+        <div class="content-box devotions"><button>Daily Devotions</button></div>
+    </section>
 
-            </div>
-            <div class="events"><button>Upcomming Events</button></div>
-            <button>Devotions</button>
-
+    <footer>
+        <p>© 2025 Shekina Ministries Evangelist Network | All Rights Reserved</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">Instagram</a>
         </div>
+    </footer>
 
-        <footer>
-            <p>© 2025 Shekina Ministries Evangelist Network | All Rights Reserved</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">YouTube</a>
-                <a href="#">Instagram</a>
-            </div>
-        </footer>
-        
-    </body>
-       
+    <script src="index.js"></script>
+</body>
+</html>
