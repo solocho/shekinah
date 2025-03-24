@@ -50,11 +50,32 @@ header {
     text-decoration: underline;
 }
 
+/* HAMBURGER MENU */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
 /* ABOUT PAGE */
 .about {
     padding: 80px 20px;
     text-align: center;
     background: #f4f4f4;
+}
+
+.about-intro h1 {
+    font-size: 36px;
+    color: #004d00;
+    margin-bottom: 10px;
+}
+
+.about-intro p {
+    font-size: 18px;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .about-section {
@@ -66,11 +87,23 @@ header {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.about-section h2 {
+    font-size: 22px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
 /* LEADERSHIP SECTION */
 .leadership {
     padding: 60px 20px;
     text-align: center;
     background: #f9f9f9;
+}
+
+.leadership h2 {
+    font-size: 28px;
+    color: #004d00;
+    margin-bottom: 20px;
 }
 
 .leader-container {
@@ -80,6 +113,7 @@ header {
     gap: 20px;
 }
 
+/* FIXED IMAGE ISSUE */
 .leader {
     background: white;
     padding: 20px;
@@ -89,12 +123,11 @@ header {
     text-align: center;
 }
 
-/* Leader Image Styling */
 .leader-img-placeholder {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    overflow: hidden; /* Ensures images do not overflow */
+    overflow: hidden; /* Makes sure images don’t overflow */
     margin: 0 auto 10px;
     display: flex;
     align-items: center;
@@ -103,10 +136,11 @@ header {
 }
 
 .leader-img-placeholder img {
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Full width of container */
+    height: 100%; /* Full height of container */
     object-fit: cover; /* Ensures images fit properly */
     border-radius: 50%;
+    display: block;
 }
 
 /* FOOTER */
@@ -122,4 +156,37 @@ footer {
     color: #FFD700;
     margin: 0 10px;
     text-decoration: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: green;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        display: block;
+    }
+
+    .leader-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
