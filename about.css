@@ -35,6 +35,7 @@ header {
     margin-left: 10px;
 }
 
+/* NAVIGATION */
 .nav-links {
     display: flex;
     gap: 15px;
@@ -44,6 +45,7 @@ header {
     color: white;
     text-decoration: none;
     font-size: 16px;
+    padding: 10px;
 }
 
 .nav-links a:hover {
@@ -127,7 +129,7 @@ header {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    overflow: hidden; /* Makes sure images don’t overflow */
+    overflow: hidden; /* Ensures images stay inside the circle */
     margin: 0 auto 10px;
     display: flex;
     align-items: center;
@@ -167,9 +169,9 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: green;
+        background-color: #004d00;
         position: absolute;
-        top: 100%;
+        top: 60px;
         left: 0;
         width: 100%;
         text-align: center;
